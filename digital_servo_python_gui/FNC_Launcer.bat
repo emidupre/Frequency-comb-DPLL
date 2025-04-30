@@ -1,0 +1,1 @@
+C:\WPy64-3720\python-3.7.2.amd64\python.exe main.py

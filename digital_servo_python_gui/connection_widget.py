@@ -54,7 +54,7 @@ class ConnectionWidget(QtWidgets.QWidget):
         # build the string that we will display to the user in the combo box:
         strDisplay = ''
         #print('MAC_to_display_string: %s, %s' % (strMAC, strIP))
-        #print(self.devices_data)
+        print(self.devices_data)
 
         try:
             box_name = self.devices_data[strMAC.replace(':', '')]['name']
@@ -191,7 +191,7 @@ def findMostLikelyLANBroadcastIPAddress():
        -prefer if the address starts with 192.168
        -choose the subnet that has the lowest third byte: eg if there are both 192.168.1.10 and 192.168.2.10, chooose 129.168.1.10 as the correct one
     """
-    addrCandidate = '192.168.0.255'
+    addrCandidate = '192.168.100.255'
 
     try:
         listAddr = socket.getaddrinfo(socket.gethostname(), None)
@@ -202,10 +202,10 @@ def findMostLikelyLANBroadcastIPAddress():
             if family == socket.AF_INET:
                 # this is IPv4
                 # print('IP candidate: %s' % sockaddr[0])
-                third_byte = int(sockaddr[0].split('.')[2])
+                third_byte = int(sockaddr[2].split('.')[2])
                 if third_byte <= min_third_byte:
                     min_third_byte = third_byte
-                    addrCandidate = sockaddr[0]
+                    addrCandidate = sockaddr[2]
         # print('Chosen local IP: %s' % addrCandidate)
 
     except:

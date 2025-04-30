@@ -1,7 +1,7 @@
 <devices_data>
 	<!-- Add a field called "IP" to always add this device to the list of "connected FGPAs,
 	for easy access in case the UDP discovery mechanism doesn't work properly (for example if UDP broadcasts are blocked)-->
-	<Device_1 MAC_addr = "00:26:32:f0:52:c6" color = "#0e2f44" name = "Counter 1" shorthand = "Counter 1"  config_file = "system_parameters_RP_Default.xml" />
+	<Device_1 MAC_addr = "002632f0c712" color = "#0e2f44" name = "Fiber Noise Cancellation Box" shorthand = "FNC"  config_file = "system_parameters_FNC.xml" />
 	
 	<!-- For color, see http://www.color-hex.com/ or any other hex color resource-->
 </devices_data>

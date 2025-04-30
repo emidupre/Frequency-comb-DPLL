@@ -115,11 +115,11 @@ class initialConfiguration(QtWidgets.QDialog):
 
 		self.qradio_usefromlist = Qt.QRadioButton('Use listed')
 		self.qradio_usefromtextbox = Qt.QRadioButton('Use manual entry')
-		self.qradio_usefromtextbox.setChecked(False)
-		self.qradio_usefromlist.setChecked(True)
+		self.qradio_usefromtextbox.setChecked(True)
+		self.qradio_usefromlist.setChecked(False)
 
 		self.qlabel_manual_entry = Qt.QLabel('Manual IP entry')
-		self.qedit_manual_entry = Qt.QLineEdit('192.168.0.150')
+		self.qedit_manual_entry = Qt.QLineEdit('192.168.100.3')
 
 		self.qlabel_host_port = Qt.QLabel('Host Port')
 		self.qedit_host_port = Qt.QLineEdit('5000')
